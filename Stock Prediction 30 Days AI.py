@@ -73,7 +73,7 @@ import matplotlib.dates as mdates
 fig, ax = plt.subplots()
 ax.plot(predictions_df.index, predictions_df['Close'], color='green' if predictions_df['Close'][-1] >= last_year['Close'][-1] else 'r', label='Predicted')
 ax.plot(last_year.index, last_year['Close'], color='blue', label='Actual')
-plt.title(stock_ticker + ' Historical Price Prediction')
+plt.title(stock_ticker.upper() + ' Historical Price Prediction')
 plt.xlabel('Date')
 plt.ylabel('Price (USD)')
 plt.legend()
